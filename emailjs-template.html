@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f5f5f5; }
+    .document { background-color: white; padding: 40px; border: 2px solid #333; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .header { text-align: center; border-bottom: 3px solid #2563eb; padding-bottom: 20px; margin-bottom: 30px; }
+    .logo { width: 120px; height: auto; max-width: 120px; margin: 0 auto 20px; display: block; }
+    .header h1 { color: #2563eb; margin: 0; font-size: 28px; }
+    .header h2 { color: #7c3aed; margin: 5px 0; font-size: 20px; }
+    .header p { color: #666; margin: 5px 0; font-size: 14px; }
+    .photo-section { text-align: center; margin: 20px 0; }
+    .photo-section img { width: 150px; height: 150px; object-fit: cover; border: 3px solid #2563eb; border-radius: 10px; }
+    .section { margin: 25px 0; }
+    .section-title { background-color: #2563eb; color: white; padding: 10px 15px; font-size: 16px; font-weight: bold; margin-bottom: 15px; }
+    .field { margin: 10px 0; padding: 8px; background-color: #f8f9fa; border-left: 3px solid #2563eb; }
+    .field-label { font-weight: bold; color: #333; display: inline-block; width: 200px; }
+    .field-value { color: #555; }
+    table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+    th { background-color: #7c3aed; color: white; padding: 10px; text-align: left; font-size: 12px; }
+    td { padding: 10px; border: 1px solid #ddd; background-color: #f8f9fa; font-size: 12px; }
+    .parent-row { background-color: #e0e7ff; font-weight: bold; }
+    .footer { margin-top: 30px; padding-top: 20px; border-top: 2px solid #ddd; text-align: center; color: #666; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="document">
+    <div class="header">
+      <h1>MINERVAA VIDHYA MANDHIR SCHOOL</h1>
+      <h2>Admission Enquiry Form</h2>
+      <p>A21, A22 D Colony, Pollachi, Tamil Nadu</p>
+      <p>📞 +91 98948 86733 / +91 99949 59484</p>
+      <p style="margin-top: 10px; font-weight: bold;">Form Submission Date: {{submissionDate}}</p>
+    </div>
+
+    <div class="photo-section">
+      <img src="{{photoPreview}}" alt="Student Photo" />
+      <p style="margin-top: 10px; color: #666; font-weight: bold;">Student Photograph</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">SECTION 1: CHILD INFORMATION</div>
+      <div class="field">
+        <span class="field-label">Name of the Child:</span>
+        <span class="field-value">{{childName}}</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Date of Birth:</span>
+        <span class="field-value">{{dateOfBirth}}</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Sex:</span>
+        <span class="field-value">{{sex}}</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Contact Type:</span>
+        <span class="field-value">{{contactType}}</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Contact Number:</span>
+        <span class="field-value">{{contactNumber}}</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">SECTION 2: DETAILS OF PARENTS/GUARDIAN</div>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Father</th>
+            <th>Mother</th>
+            <th>Guardian</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="parent-row">Name (Capital)</td>
+            <td>{{fatherName}}</td>
+            <td>{{motherName}}</td>
+            <td>{{guardianName}}</td>
+          </tr>
+          <tr>
+            <td class="parent-row">Nationality</td>
+            <td>{{fatherNationality}}</td>
+            <td>{{motherNationality}}</td>
+            <td>{{guardianNationality}}</td>
+          </tr>
+          <tr>
+            <td class="parent-row">Occupation</td>
+            <td>{{fatherOccupation}}</td>
+            <td>{{motherOccupation}}</td>
+            <td>{{guardianOccupation}}</td>
+          </tr>
+          <tr>
+            <td class="parent-row">Office Address & Tel</td>
+            <td>{{fatherOfficeAddress}}</td>
+            <td>{{motherOfficeAddress}}</td>
+            <td>{{guardianOfficeAddress}}</td>
+          </tr>
+          <tr>
+            <td class="parent-row">Distance from School</td>
+            <td>{{fatherDistance}}</td>
+            <td>{{motherDistance}}</td>
+            <td>{{guardianDistance}}</td>
+          </tr>
+          <tr>
+            <td class="parent-row">Permanent Address</td>
+            <td>{{fatherPermanentAddress}}</td>
+            <td>{{motherPermanentAddress}}</td>
+            <td>{{guardianPermanentAddress}}</td>
+          </tr>
+          <tr>
+            <td class="parent-row">Monthly Income</td>
+            <td>{{fatherIncome}}</td>
+            <td>{{motherIncome}}</td>
+            <td>{{guardianIncome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title">SECTION 3: ACADEMIC INFORMATION</div>
+      <div class="field">
+        <span class="field-label">Class to which Admission is Sought:</span>
+        <span class="field-value">{{classAdmission}}</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Subjects Proposed to Offer:</span>
+        <span class="field-value">{{subjects}}</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">SECTION 4: TRANSFER CERTIFICATE & ADDITIONAL INFORMATION</div>
+      <div class="field">
+        <span class="field-label">Transfer Certificate Attached:</span>
+        <span class="field-value">{{tcAttached}}</span>
+      </div>
+      <div class="field">
+        <span class="field-label">TC Number:</span>
+        <span class="field-value">{{tcNumber}}</span>
+      </div>
+      <div class="field">
+        <span class="field-label">TC Date:</span>
+        <span class="field-value">{{tcDate}}</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Mother Tongue:</span>
+        <span class="field-value">{{motherTongue}}</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Home Town:</span>
+        <span class="field-value">{{homeTown}}</span>
+      </div>
+      <div class="field">
+        <span class="field-label">How did you know about MVM:</span>
+        <span class="field-value">{{howKnow}}</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>Minervaa Vidhya Mandhir School</strong></p>
+      <p>This is an auto-generated admission enquiry form</p>
+      <p>For any queries, please contact: +91 98948 86733 / +91 99949 59484</p>
+    </div>
+  </div>
+</body>
+</html>
