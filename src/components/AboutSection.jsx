@@ -8,21 +8,21 @@ export const AboutSection = () => {
     {
       icon: Lightbulb,
       title: 'Vision',
-      description: 'To nurture young minds and inspire them to become confident, creative, and compassionate individuals.',
+      description: 'To nurture young minds and inspire them to become confident, creative and compassionate individuals.',
       color: 'from-yellow-400 to-orange-500',
       link: '/vision'
     },
     {
       icon: Heart,
       title: 'Mission',
-      description: 'Providing quality education with a focus on holistic development, creativity, and character building.',
+      description: 'Providing quality education with a focus on holistic development, creativity and character building.',
       color: 'from-pink-400 to-red-500',
       link: '/mission'
     },
     {
       icon: Award,
       title: 'Values',
-      description: 'Excellence, Integrity, Respect, Innovation, and Empathy form the foundation of our institution.',
+      description: 'Excellence, Integrity, Respect, Innovation and Empathy form the foundation of our institution.',
       color: 'from-blue-400 to-purple-500',
       link: '/values'
     },
