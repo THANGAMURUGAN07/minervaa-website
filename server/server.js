@@ -344,22 +344,7 @@ app.post('/api/admission', limiter, upload.single('photo'), async (req, res) => 
         <span class="field-label">Transfer Certificate Attached:</span>
         <span class="field-value">${formData.tcAttached || 'N/A'}</span>
       </div>
-      <div class="field">
-        <span class="field-label">TC Number:</span>
-        <span class="field-value">${formData.tcNumber || 'N/A'}</span>
-      </div>
-      <div class="field">
-        <span class="field-label">TC Date:</span>
-        <span class="field-value">${formData.tcDate || 'N/A'}</span>
-      </div>
-      <div class="field">
-        <span class="field-label">Mother Tongue:</span>
-        <span class="field-value">${formData.motherTongue || 'N/A'}</span>
-      </div>
-      <div class="field">
-        <span class="field-label">Home Town:</span>
-        <span class="field-value">${formData.homeTown || 'N/A'}</span>
-      </div>
+      <!-- TC Number, TC Date, Mother Tongue and Home Town removed from email per request -->
       <div class="field">
         <span class="field-label">How did you know about MVM:</span>
         <span class="field-value">${formData.howKnow || 'N/A'}</span>
@@ -562,7 +547,8 @@ async function generatePDFWithPDFKit(formData, subjects, submissionDate, photoFi
       });
       
       doc.y = currentY + 15;
-
+      // Move Section 3 down by one line for better spacing
+      doc.moveDown(1);
       // Section 3: Academic Information
       // Check if we need a new page
       if (doc.y > 700) {

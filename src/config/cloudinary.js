@@ -4,7 +4,10 @@
 // Generate local URL for an image from public folder
 export const getLocalImageUrl = (folder, imageName) => {
   // Images in Vite's public folder are served from the root
-  return `/${folder}/${imageName}`;
+  // Encode segments to safely handle spaces and special characters
+  const folderSegment = encodeURIComponent(folder);
+  const imageSegment = encodeURIComponent(imageName);
+  return `/${folderSegment}/${imageSegment}`;
 };
 
 // Generate thumbnail URL (same as full size for local images)

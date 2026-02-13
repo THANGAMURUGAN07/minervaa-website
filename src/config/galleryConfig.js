@@ -26,7 +26,7 @@ export const galleryEventsConfig = [
   },
   { 
     id: 'food-festival', 
-    title: 'Food Festival & Expo', 
+    title: 'food festival', 
     color: 'from-rose-500 to-pink-600', 
     folder: 'food festival', 
   },

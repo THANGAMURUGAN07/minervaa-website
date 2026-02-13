@@ -500,30 +500,34 @@ export const AdmissionPopup = () => {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="admit-childName" className="block text-sm font-semibold text-gray-700 mb-2">
                           Name of the Child (Full Name in Capital Letters) *
                         </label>
                         <input
+                          id="admit-childName"
                           type="text"
                           name="childName"
                           value={formData.childName}
                           onChange={handleInputChange}
                           required
+                          autoComplete="name"
                           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent uppercase"
                           placeholder="ENTER CHILD'S FULL NAME"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="admit-dateOfBirth" className="block text-sm font-semibold text-gray-700 mb-2">
                           Date of Birth *
                         </label>
                         <input
+                          id="admit-dateOfBirth"
                           type="date"
                           name="dateOfBirth"
                           value={formData.dateOfBirth}
                           onChange={handleInputChange}
                           required
+                          autoComplete="bday"
                           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                       </div>
@@ -568,10 +572,11 @@ export const AdmissionPopup = () => {
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="admit-contactType" className="block text-sm font-semibold text-gray-700 mb-2">
                           Contact Type *
                         </label>
                         <select
+                          id="admit-contactType"
                           name="contactType"
                           value={formData.contactType}
                           onChange={handleInputChange}
@@ -586,15 +591,17 @@ export const AdmissionPopup = () => {
                       </div>
 
                       <div className="md:col-span-2">
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="admit-contactNumber" className="block text-sm font-semibold text-gray-700 mb-2">
                           Contact Number *
                         </label>
                         <input
+                          id="admit-contactNumber"
                           type="tel"
                           name="contactNumber"
                           value={formData.contactNumber}
                           onChange={handleInputChange}
                           required
+                          autoComplete="tel"
                           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           placeholder="Enter contact number"
                         />

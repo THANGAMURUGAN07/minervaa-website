@@ -81,8 +81,15 @@ export const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 scroll-mt-24">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 scroll-mt-24 relative z-30 overflow-x-hidden">
+      {isSubmitting && (
+        <div className="absolute inset-0 z-40 flex items-center justify-center pointer-events-none">
+          <div className="bg-white/90 p-4 rounded-lg shadow-lg pointer-events-auto">
+            <div role="status" aria-label="Loading" className="w-12 h-12 rounded-full border-4 border-blue-500 border-t-transparent animate-spin"></div>
+          </div>
+        </div>
+      )}
+      <div className="container mx-auto px-4 sm:px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -107,49 +114,57 @@ export const ContactSection = () => {
             <h3 className="text-3xl font-bold mb-6 text-gray-800">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-gray-700 font-medium mb-2">Name</label>
+                <label htmlFor="contact-name" className="block text-gray-700 font-medium mb-2">Name</label>
                 <input
+                  id="contact-name"
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  autoComplete="name"
                   className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors"
                   placeholder="Your Name"
                 />
               </div>
               <div>
-                <label className="block text-gray-700 font-medium mb-2">Email</label>
+                <label htmlFor="contact-email" className="block text-gray-700 font-medium mb-2">Email</label>
                 <input
+                  id="contact-email"
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  autoComplete="email"
                   className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors"
                   placeholder="your.email@example.com"
                 />
               </div>
               <div>
-                <label className="block text-gray-700 font-medium mb-2">Phone</label>
+                <label htmlFor="contact-phone" className="block text-gray-700 font-medium mb-2">Phone</label>
                 <input
+                  id="contact-phone"
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
                   required
+                  autoComplete="tel"
                   className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors"
                   placeholder="+91 1234567890"
                 />
               </div>
               <div>
-                <label className="block text-gray-700 font-medium mb-2">Message</label>
+                <label htmlFor="contact-message" className="block text-gray-700 font-medium mb-2">Message</label>
                 <textarea
+                  id="contact-message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
                   rows="4"
+                  autoComplete="off"
                   className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors resize-none"
                   placeholder="Tell us about your inquiry..."
                 ></textarea>

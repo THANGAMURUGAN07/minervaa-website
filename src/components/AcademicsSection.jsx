@@ -8,8 +8,8 @@ export const AcademicsSection = () => {
   const academicLevels = [
     {
       title: 'Pre School',
-      subtitle: 'Ages 4-6',
-      description: 'A nurturing environment where young children learn through play, exploration, and joyful discovery while developing essential social and motor skills.',
+      subtitle: 'KGs',
+      description: 'A nurturing environment where young children learn through play, exploration and joyful discovery while developing essential social and motor skills.',
       color: 'from-pink-400 to-rose-500',
       icon: Heart,
       features: ['Play-based Learning', 'Creative Arts', 'Music & Movement', 'Social Development'],
@@ -17,7 +17,7 @@ export const AcademicsSection = () => {
     {
       title: 'Primary School',
       subtitle: 'Grades 1-5',
-      description: 'Building strong academic foundations with engaging lessons, hands-on projects, and a focus on curiosity and critical thinking for lifelong learning.',
+      description: 'Building strong academic foundations with engaging lessons, hands-on projects and a focus on curiosity and critical thinking for lifelong learning.',
       color: 'from-blue-400 to-cyan-500',
       icon: BookOpen,
       features: ['Core Subjects', 'STEM Projects', 'Reading Programs', 'Sports Activities'],
@@ -25,7 +25,7 @@ export const AcademicsSection = () => {
     {
       title: 'Middle & High School',
       subtitle: 'Grades 6-8',
-      description: 'Advanced curriculum with specialized subjects, career guidance, and extracurricular activities to prepare students for higher education.',
+      description: 'Advanced curriculum with specialized subjects, career guidance and extracurricular activities to prepare students for higher education.',
       color: 'from-purple-400 to-indigo-500',
       icon: GraduationCap,
       features: ['Advanced Subjects', 'Career Counseling', 'Competitive Exam Prep', 'Leadership Programs'],

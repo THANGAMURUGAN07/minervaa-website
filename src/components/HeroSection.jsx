@@ -157,7 +157,7 @@ export const HeroSection = () => {
             >
               <Link
                 to="/gallery#gallery"
-                className="px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg shadow-xl hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
+                className="w-56 h-14 bg-white text-blue-600 rounded-full font-bold text-lg shadow-xl hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
               >
                 Explore Our Campus
               </Link>
@@ -168,7 +168,7 @@ export const HeroSection = () => {
             >
               <button
                 onClick={() => window.dispatchEvent(new Event('openAdmission'))}
-                className="px-10 py-3 bg-white text-purple-600 rounded-full font-bold text-lg shadow-xl inline-flex items-center justify-center hover:bg-gray-100 transition-colors"
+                className="w-56 h-14 bg-white text-purple-600 rounded-full font-bold text-lg shadow-xl inline-flex items-center justify-center hover:bg-gray-100 transition-colors"
               >
                 Enroll Now
               </button>

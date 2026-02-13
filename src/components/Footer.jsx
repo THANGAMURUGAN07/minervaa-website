@@ -132,7 +132,10 @@ export const Footer = () => {
           <p className="text-blue-200 flex items-center justify-center space-x-2">
             <span>Made with</span>
             <Heart className="w-5 h-5 text-pink-400 fill-pink-400" />
-            <span>by Minervaa Vidhya Mandhir</span>
+            <span>by</span>
+            <a href="https://sayvai.com/" target="_blank" rel="noopener noreferrer" className="text-blue-100 hover:underline">
+              Sayvai Software LLP
+            </a>
           </p>
           <p className="text-blue-300 mt-2">
             © 2025 Minervaa Vidhya Mandhir. All rights reserved.

@@ -14,8 +14,8 @@ export const FacilitiesSection = () => {
     },
     {
       icon: Beaker,
-      title: 'Science Labs',
-      description: 'Well-equipped labs for hands-on experiments and scientific exploration.',
+      title: 'Science and Computer Lab',
+      description: 'Well-equipped science and computer lab with modern apparatus, computers, and internet access for hands-on experiments, coding, and digital learning.',
       color: 'from-green-400 to-green-600',
       slug: 'science-labs',
     },
